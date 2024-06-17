@@ -1,5 +1,5 @@
 .container {
-  @apply container-md flex flex-row w-full justify-between items-center overflow-hidden;
+  @apply flex flex-row w-full justify-between items-center overflow-hidden;
 
   .searchIconContainer {
     @apply bg-primary w-[35px] h-[35px] flex items-center justify-center rounded-[50%] cursor-pointer;

@@ -8,7 +8,7 @@ import { useState } from "react";
 const GridSwitchBar = () => {
   const [seachClick, setSearchClick] = useState(false);
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} container-md`}>
       {/* left filtered bar */}
       <ul className="flex flex-row gap-[10px] text-[16px] items-center">
         <li className="button-active py-[8px] px-[15px] rounded-[50px]">
