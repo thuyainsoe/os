@@ -1,0 +1,36 @@
+.container {
+  @apply container-md flex flex-row w-full justify-between items-center overflow-hidden;
+
+  .searchIconContainer {
+    @apply bg-primary w-[35px] h-[35px] flex items-center justify-center rounded-[50%] cursor-pointer;
+    transition: all 0.4s;
+    &.active {
+      transform: translateX(-500px);
+      opacity: 0;
+      transition: all 0.4s;
+    }
+  }
+
+  .searchInput {
+    @apply w-[500px] h-[35px] rounded-[100px] border border-[#e4e7ed] px-[20px] flex items-center justify-between;
+    @apply absolute top-0  left-[35px] opacity-0;
+    transition: all 0.4s;
+
+    &.active {
+      @apply opacity-[1];
+      transform: translateX(-500px);
+      transition: all 0.4s;
+    }
+
+    input {
+      @apply w-full;
+      &:focus {
+        @apply outline-none;
+      }
+
+      &::placeholder {
+        @apply text-[14px];
+      }
+    }
+  }
+}

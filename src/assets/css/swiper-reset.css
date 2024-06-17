@@ -1,0 +1,14 @@
+.full-carousel#swiper-reset {
+  .swiper-button-prev,
+  .swiper-button-next {
+    @apply hidden;
+  }
+
+  .swiper-pagination-bullet {
+    @apply bg-[#ffffffc9] rounded-[50px] w-[10px] h-[5px];
+  }
+
+  .swiper-pagination-bullet-active {
+    @apply w-[30px];
+  }
+}
