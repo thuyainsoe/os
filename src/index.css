@@ -23,10 +23,3 @@ body {
 .button-active {
   @apply bg-primary text-white border-none;
 }
-
-.test {
-  /* @apply flex flex-row  justify-between flex-wrap; */
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 25px;
-}

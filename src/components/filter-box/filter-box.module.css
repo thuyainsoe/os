@@ -1,0 +1,28 @@
+.itemListContainer {
+  @apply h-[118px] overflow-hidden text-[14px];
+  transition: all 0.4s;
+}
+
+.container {
+  @apply flex flex-col gap-[25px] absolute top-0 left-0 h-[calc(100vh-78px)] w-[300px] bg-white;
+  @apply pl-[40px] pr-[20px] py-[15px];
+
+  &::-webkit-scrollbar {
+    @apply w-[3px] bg-[#f5f5f5] rounded-md;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply bg-primary;
+  }
+}
+
+.allListBoxContainer {
+  @apply flex flex-col gap-[30px] overflow-y-scroll;
+  &::-webkit-scrollbar {
+    @apply w-[3px] bg-[#f5f5f5] rounded-md;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply bg-primary;
+  }
+}
