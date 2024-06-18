@@ -3,13 +3,13 @@ import shop from "@/assets/images/nav-items/shop.svg";
 import fav from "@/assets/images/nav-items/fav.svg";
 import category from "@/assets/images/nav-items/category.svg";
 import cart from "@/assets/images/nav-items/cart.svg";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="container-md h-[78px] bg-primary py-[15px] text-white flex justify-between">
+    <div className="sticky top-0 z-[100] container-md h-[78px] bg-primary py-[15px] text-white flex justify-between">
       {/* Site Logo */}
-      <div className="flex gap-[6px] items-center">
+      <Link to="/" className="flex gap-[6px] items-center">
         <img className="w-[50px] h-[50px]" src={logo} alt="" />
         <div>
           <h3 className="text-[14px] font-[500] leading-[16px]">
@@ -17,7 +17,7 @@ const Navbar = () => {
           </h3>
           <p className="text-[12px] font-[300]">Shop with Us</p>
         </div>
-      </div>
+      </Link>
 
       {/* Nav Items */}
       <ul className="flex items-center gap-[10px] text-[14px]">

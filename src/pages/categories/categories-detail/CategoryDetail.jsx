@@ -23,8 +23,8 @@ const CategoryDetail = () => {
   };
 
   return (
-    <div>
-      <div className="flex justify-between w-full h-[36px] my-[20px] items-center container-md">
+    <>
+      <div className="flex justify-between w-full h-[36px] my-[20px] items-center container-md ">
         <div className="flex items-center gap-[20px]">
           <Link to="/categories" className="flex items-center gap-[5px]">
             <img src={catagoryIcon} alt="catagory icon" />
@@ -36,7 +36,7 @@ const CategoryDetail = () => {
         <div></div>
       </div>
       {/* filter bar */}
-      <div className="my-[20px] flex items-center justify-between container-md">
+      <div className="flex items-center justify-between container-md py-[20px] sticky top-[78px] bg-white">
         <div className="flex items-center gap-[20px]">
           {/* filter */}
           <div
@@ -59,7 +59,7 @@ const CategoryDetail = () => {
         <ViewSwitchBtn setClickedType={setClickedType} isGrid={isGrid} />
       </div>
       <ViewSwitcher isGrid={isGrid} />
-    </div>
+    </>
   );
 };
 

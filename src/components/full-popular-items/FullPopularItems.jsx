@@ -49,7 +49,7 @@ const mockShirtData = [
 
 const FullPopularItems = () => {
   return (
-    <div className="container-md py-[40px] w-full flex flex-col gap-[15px]">
+    <div className="container-md pt-[40px] pb-[20px] w-full flex flex-col gap-[15px]">
       {/* top section */}
       <div className="flex items-center w-full justify-between">
         <h6>Popular Items on shop</h6>

@@ -1,5 +1,6 @@
 .container {
-  @apply flex flex-row w-full justify-between items-center overflow-hidden;
+  @apply flex flex-row w-full justify-between items-center overflow-hidden py-[20px];
+  @apply sticky top-[78px] bg-white;
 
   .searchIconContainer {
     @apply bg-primary w-[35px] h-[35px] flex items-center justify-center rounded-[50%] cursor-pointer;
