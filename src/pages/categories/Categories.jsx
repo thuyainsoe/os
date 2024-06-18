@@ -25,7 +25,7 @@ const mockCategoryItems = [
   {
     id: 2,
     images: [m4, m5, m6, m7],
-    name: "Vintage Shirt",
+    name: "Antique Jewelry",
     description:
       "Lorem ipsum dolor sit amet consectetur. Placerat arcu non varius lacus vitae morbi integer.",
     price: 10000,
@@ -33,7 +33,7 @@ const mockCategoryItems = [
   {
     id: 3,
     images: [m7, m2, shirtMock5, m1],
-    name: "Vintage Shirt",
+    name: "Old World Watches",
     description:
       "Lorem ipsum dolor sit amet consectetur. Placerat arcu non varius lacus vitae morbi integer.",
     price: 10000,
@@ -41,7 +41,7 @@ const mockCategoryItems = [
   {
     id: 4,
     images: [m3, m2, m7, m1],
-    name: "Vintage Shirt",
+    name: "Timeless Hats",
     description:
       "Lorem ipsum dolor sit amet consectetur. Placerat arcu non varius lacus vitae morbi integer.",
     price: 10000,
@@ -49,7 +49,7 @@ const mockCategoryItems = [
   {
     id: 5,
     images: [m1, shirtMock3, shirtMock4, m3],
-    name: "Vintage Shirt",
+    name: "Nostalgic Vinyl",
     description:
       "Lorem ipsum dolor sit amet consectetur. Placerat arcu non varius lacus vitae morbi integer.",
     price: 20000,

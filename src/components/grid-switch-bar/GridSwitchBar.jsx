@@ -1,13 +1,12 @@
 import searchIcon from "@/assets/images/common-icons/search.svg";
-import gridIcon from "@/assets/images/common-icons/grid-icon.svg";
-import listIcon from "@/assets/images/common-icons/list-icon.svg";
 import inputCloseIcon from "@/assets/images/common-icons/input-close-icon.svg";
 import styles from "./grid-switch-bar.module.css";
 import { useState } from "react";
+import ViewSwitchBtn from "@/components/view-switch-btn/ViewSwitchBtn.jsx";
 
 const GridSwitchBar = ({ setGridType, isGrid }) => {
   const [seachClick, setSearchClick] = useState(false);
-  const gridSwitch = (type) => {
+  const setClickedType = (type) => {
     setGridType(type);
   };
   return (
@@ -57,24 +56,7 @@ const GridSwitchBar = ({ setGridType, isGrid }) => {
             />
           </div>
         </div>
-        <div
-          className={`${styles.viewSwithItem} ${isGrid ? styles.active : ""}`}
-          onClick={() => {
-            gridSwitch("grid");
-          }}
-        >
-          <img src={gridIcon} alt="" />
-          Grid View
-        </div>
-        <div
-          className={`${styles.viewSwithItem} ${!isGrid ? styles.active : ""}`}
-          onClick={() => {
-            gridSwitch("list");
-          }}
-        >
-          <img src={listIcon} alt="" />
-          List View
-        </div>
+        <ViewSwitchBtn setClickedType={setClickedType} isGrid={isGrid} />
       </div>
     </div>
   );

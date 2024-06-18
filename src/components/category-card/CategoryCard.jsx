@@ -1,8 +1,8 @@
 import priceRangeIcon from "@/assets/images/common-icons/price-range.svg";
 import rightArrowPrimary from "@/assets/images/common-icons/right-long-arrow-primary.svg";
+import { Link } from "react-router-dom";
 
 const CategoryCard = ({ item }) => {
-  console.log(item);
   return (
     <div
       className="flex gap-[15px] items-center w-[100%] lg:w-[calc(50%-10px)] min-h-[230px]
@@ -33,9 +33,12 @@ const CategoryCard = ({ item }) => {
             Starting from {item.price} MMK
           </div>
         </div>
-        <button className="flex items-center gap-[10px] h-[19px]">
+        <Link
+          to={`/categories/${item.name.toLowerCase().replace(/\s+/g, "-")}`}
+          className="flex items-center gap-[10px] h-[19px]"
+        >
           View Item <img src={rightArrowPrimary} alt="" />
-        </button>
+        </Link>
       </div>
     </div>
   );

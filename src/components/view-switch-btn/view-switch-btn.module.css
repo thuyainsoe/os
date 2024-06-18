@@ -1,0 +1,6 @@
+.viewSwitcher {
+  @apply flex items-center gap-[5px] cursor-pointer relative z-[100] h-[36px] border-transparent border-b-2;
+  &.active {
+    @apply border-primary border-b-[2px] text-primary font-[400];
+  }
+}
