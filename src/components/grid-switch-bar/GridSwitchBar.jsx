@@ -42,7 +42,11 @@ const GridSwitchBar = ({ setGridType, isGrid }) => {
               seachClick ? styles.active : ""
             }`}
           >
-            <input type="text" placeholder="Search by categories" />
+            <input
+              className="input-reset"
+              type="text"
+              placeholder="Search by categories"
+            />
             <img
               className="w-[15px] h-[15px] cursor-pointer"
               src={inputCloseIcon}

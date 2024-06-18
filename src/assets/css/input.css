@@ -1,0 +1,9 @@
+.input-reset {
+  &:focus {
+    @apply outline-none;
+  }
+
+  &::placeholder {
+    @apply text-[14px];
+  }
+}
