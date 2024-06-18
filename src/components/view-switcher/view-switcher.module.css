@@ -1,0 +1,24 @@
+.gridContainer {
+  @apply py-[25px] grid grid-cols-[repeat(auto-fit,minmax(248px,1fr))] gap-[10px];
+  @apply 2xl:grid-cols-[repeat(5,1fr)] 2xl:gap-[25px];
+  transition: all 0.3s;
+}
+
+.listContainer {
+  @apply flex flex-col gap-[30px] py-[25px];
+  transition: all 0.3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

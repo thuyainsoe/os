@@ -5,8 +5,11 @@ import inputCloseIcon from "@/assets/images/common-icons/input-close-icon.svg";
 import styles from "./grid-switch-bar.module.css";
 import { useState } from "react";
 
-const GridSwitchBar = () => {
+const GridSwitchBar = ({ setGridType, isGrid }) => {
   const [seachClick, setSearchClick] = useState(false);
+  const gridSwitch = (type) => {
+    setGridType(type);
+  };
   return (
     <div className={`${styles.container} container-md`}>
       {/* left filtered bar */}
@@ -50,11 +53,21 @@ const GridSwitchBar = () => {
             />
           </div>
         </div>
-        <div className="flex items-center gap-[5px]">
+        <div
+          className={`${styles.viewSwithItem} ${isGrid ? styles.active : ""}`}
+          onClick={() => {
+            gridSwitch("grid");
+          }}
+        >
           <img src={gridIcon} alt="" />
           Grid View
         </div>
-        <div className="flex items-center gap-[5px]">
+        <div
+          className={`${styles.viewSwithItem} ${!isGrid ? styles.active : ""}`}
+          onClick={() => {
+            gridSwitch("list");
+          }}
+        >
           <img src={listIcon} alt="" />
           List View
         </div>

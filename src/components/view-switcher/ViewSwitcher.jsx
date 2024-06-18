@@ -1,6 +1,6 @@
-import purpleArrow from "@/assets/images/common-icons/purple-arrow-right.svg";
-import PopularItemCard from "@/components/popular-item-card/PopularItemCard";
-
+import ItemCard from "@/components/item-card/ItemCard";
+import ListItemCard from "@/components/list-item-card/ListItemCard";
+import style from "./view-switcher.module.css";
 import shirtMock from "@/assets/images/mock-images/shirt-mock.png";
 import shirtMock1 from "@/assets/images/mock-images/shirt-mock1.png";
 import shirtMock2 from "@/assets/images/mock-images/shirt-mock2.png";
@@ -45,27 +45,48 @@ const mockShirtData = [
     name: "Vintage Shirt",
     price: "12000",
   },
+  {
+    id: "7",
+    image: shirtMock3,
+    name: "Vintage Shirt",
+    price: "12000",
+  },
+  {
+    id: "8",
+    image: shirtMock4,
+    name: "Vintage Shirt",
+    price: "12000",
+  },
+  {
+    id: "9",
+    image: shirtMock5,
+    name: "Vintage Shirt",
+    price: "12000",
+  },
+  {
+    id: "10",
+    image: shirtMock1,
+    name: "Vintage Shirt",
+    price: "12000",
+  },
 ];
 
-const FullPopularItems = () => {
+const ViewSwitcher = ({ isGrid }) => {
   return (
-    <div className="container-md py-[40px] w-full flex flex-col gap-[15px]">
-      {/* top section */}
-      <div className="flex items-center w-full justify-between">
-        <h6>Popular Items on shop</h6>
-        <button className="text-primary flex items-center gap-[5px]">
-          View all popular items
-          <img src={purpleArrow} alt="right arrow" />
-        </button>
-      </div>
-      {/* items container */}
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(198px,1fr))] gap-[5px]">
-        {mockShirtData.map((shirt) => {
-          return <PopularItemCard shirt={shirt} key={shirt.id} />;
-        })}
-      </div>
+    <div
+      className={`${
+        isGrid ? style.gridContainer : style.listContainer
+      } container-md`}
+    >
+      {isGrid
+        ? mockShirtData.map((shirt) => {
+            return <ItemCard shirt={shirt} key={shirt.id} />;
+          })
+        : mockShirtData.map((shirt) => {
+            return <ListItemCard shirt={shirt} key={shirt.id} />;
+          })}
     </div>
   );
 };
 
-export default FullPopularItems;
+export default ViewSwitcher;
