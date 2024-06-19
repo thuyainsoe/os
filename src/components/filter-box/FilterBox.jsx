@@ -196,6 +196,34 @@ const FilterBox = ({ setFilterClose }) => {
             </span>
           </div>
           {/* orderby end */}
+          {/* price start */}
+          <div className="flex flex-col gap-[20px]">
+            <div>
+              Price Range{" "}
+              <span className="text-[12px] italic text-darkgray">
+                (Enter amount only, eg. 100)
+              </span>
+            </div>
+            <div className="flex flex-col gap-[15px]">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Enter from price"
+                  className={styles.priceInput}
+                />
+                <div className={styles.label}>From Price</div>
+              </div>
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Enter to price"
+                  className={styles.priceInput}
+                />
+                <div className={`${styles.label} !w-[54px]`}>To Price</div>
+              </div>
+            </div>
+          </div>
+          {/* price end */}
         </div>
       </div>
     </>

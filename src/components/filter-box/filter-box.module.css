@@ -26,3 +26,22 @@
     @apply bg-primary;
   }
 }
+
+.priceInput {
+  @apply border border-lightgray py-[8px] px-[20px] rounded-[50px] relative;
+
+  &:focus {
+    @apply outline-none border-primary;
+  }
+
+  &:focus + div {
+    @apply top-[-7px] opacity-[1];
+    transition: all 0.2s;
+  }
+}
+
+.label {
+  @apply absolute top-[15px] left-[20px] w-[70px] h-[14px] bg-white text-[12px] opacity-0;
+  @apply flex items-center justify-center pointer-events-none;
+  transition: all 0.2s;
+}
