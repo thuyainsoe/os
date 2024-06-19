@@ -12,3 +12,7 @@
     @apply w-[30px];
   }
 }
+
+.react-stars {
+  @apply flex gap-[5px];
+}

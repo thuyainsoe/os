@@ -1,5 +1,4 @@
 import categoryIcon from "@/assets/images/common-icons/category-primary.svg";
-import searchIcon from "@/assets/images/common-icons/search-input-icon.svg";
 import CategoryCard from "../../components/category-card/CategoryCard";
 import shirtMock2 from "@/assets/images/mock-images/shirt-mock2.png";
 import shirtMock3 from "@/assets/images/mock-images/shirt-mock3.png";
@@ -12,6 +11,7 @@ import m4 from "@/assets/images/mock-images/m4.png";
 import m5 from "@/assets/images/mock-images/m5.png";
 import m6 from "@/assets/images/mock-images/m6.png";
 import m7 from "@/assets/images/mock-images/m7.png";
+import SearchInput from "@/components/search-input/SearchInput";
 
 const mockCategoryItems = [
   {
@@ -65,14 +65,7 @@ const Categories = () => {
           <img src={categoryIcon} alt="" />
           Categories
         </div>
-        <div className="flex gap-[12px] items-center w-[300px] border border-lightgray h-[36px] px-[20px] rounded-[100px]">
-          <img className="w-[24px] h-[24px]" src={searchIcon} alt="" />
-          <input
-            className="input-reset w-full"
-            type="text"
-            placeholder="Search by categories"
-          />
-        </div>
+        <SearchInput />
       </div>
 
       {/* all items */}

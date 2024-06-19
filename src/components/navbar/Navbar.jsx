@@ -21,7 +21,10 @@ const Navbar = () => {
 
       {/* Nav Items */}
       <ul className="flex items-center gap-[10px] text-[14px]">
-        <NavLink className="flex items-center py-[10px] px-[15px] gap-[5px]">
+        <NavLink
+          to="/shops"
+          className="flex items-center py-[10px] px-[15px] gap-[5px]"
+        >
           <img src={shop} alt="shop logo" />
           Shops
         </NavLink>
