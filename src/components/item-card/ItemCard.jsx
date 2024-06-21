@@ -1,4 +1,5 @@
 import cartIcon from "@/assets/images/common-icons/cart-icon.svg";
+import { Link } from "react-router-dom";
 const ItemCard = ({ shirt }) => {
   return (
     <div
@@ -17,7 +18,14 @@ const ItemCard = ({ shirt }) => {
           <img src={cartIcon} alt="" />
           <span>Add to Cart</span>
         </button>
-        <button className="w-full h-[36px]">View Detail</button>
+        <Link
+          className="w-full h-[36px] flex items-center justify-center"
+          to={`/categories/${shirt.category}/${shirt.name
+            .toLowerCase()
+            .replace(/\s+/g, "-")}`}
+        >
+          View Detail
+        </Link>
       </div>
     </div>
   );

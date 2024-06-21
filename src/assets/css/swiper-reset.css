@@ -16,3 +16,39 @@
 .react-stars {
   @apply flex gap-[5px];
 }
+
+#item-detail {
+  .swiper-button-prev,
+  .swiper-button-next {
+    @apply text-black z-[200];
+  }
+
+  .swiper-button-prev::after {
+    transform: scale(0.5);
+  }
+
+  .swiper-button-next::after {
+    transform: scale(0.5);
+  }
+}
+
+.image-gallery-image {
+  @apply aspect-square;
+}
+
+.image-gallery-thumbnail.active {
+  border: 1px solid black !important;
+}
+
+.image-gallery-thumbnail:hover {
+  border: 1px solid black !important;
+}
+
+.image-gallery-icon {
+  svg {
+    stroke: black !important;
+    width: 20px !important;
+  }
+  .image-gallery-svg {
+  }
+}

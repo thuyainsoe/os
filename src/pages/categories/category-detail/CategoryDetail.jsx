@@ -41,7 +41,6 @@ const CategoryDetail = () => {
           <img src={rightIcon} alt="right icon" />
           <div>{category}</div>
         </div>
-        <div></div>
       </div>
       {/* filter bar */}
       <div className=" flex items-center justify-between container-md py-[20px] sticky top-[78px] bg-white z-[100] ">

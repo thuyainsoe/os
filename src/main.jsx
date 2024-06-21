@@ -7,6 +7,7 @@ import Home from "@/pages/home/Home";
 import Categories from "@/pages/categories/Categories";
 import CategoryDetail from "@/pages/categories/category-detail/CategoryDetail";
 import Shops from "@/pages/shops/Shops";
+import ItemDetail from "@/pages/categories/category-detail/item-detail/ItemDetail";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/categories/:category",
         element: <CategoryDetail />,
+      },
+      {
+        path: "/categories/:category/:item",
+        element: <ItemDetail />,
       },
       {
         path: "*",
