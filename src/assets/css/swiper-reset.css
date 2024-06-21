@@ -52,3 +52,20 @@
   .image-gallery-svg {
   }
 }
+
+#review-dialog::-webkit-scrollbar {
+  @apply hidden;
+}
+
+input.review-dialog-input {
+  @apply w-full h-full bg-transparent;
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+
+  &::-webkit-input-placeholder {
+    @apply text-[#828282] text-[14px];
+  }
+}
