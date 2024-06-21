@@ -2,8 +2,10 @@ import deliveryIcon from "@/assets/images/common-icons/delivery-car.svg";
 import decreseIcon from "@/assets/images/common-icons/decrease-icon.svg";
 import increaseIcon from "@/assets/images/common-icons/increas-icon.svg";
 import cartIcon from "@/assets/images/common-icons/cart-icon.svg";
+import { useState } from "react";
 
 const ItemFullDetail = () => {
+  const [itemCount, setItemCount] = useState(1);
   return (
     <>
       {/* first */}
@@ -85,9 +87,29 @@ const ItemFullDetail = () => {
       <div className="flex flex-col gap-[10px] mt-[30px]">
         <span>Select Quantity</span>
         <div className="flex items-center gap-[30px]">
-          <img src={decreseIcon} alt="" />
-          <span>1</span>
-          <img src={increaseIcon} alt="" />
+          <img
+            src={decreseIcon}
+            className={`cursor-pointer ${itemCount === 1 ? "opacity-30" : ""}`}
+            alt=""
+            onClick={() => {
+              setItemCount((prev) => {
+                if (prev === 1) return 1;
+                return prev - 1;
+              });
+            }}
+          />
+          <span>{itemCount}</span>
+          <img
+            src={increaseIcon}
+            className="cursor-pointer"
+            alt=""
+            onClick={() => {
+              setItemCount((prev) => {
+                console.log(prev);
+                return prev + 1;
+              });
+            }}
+          />
         </div>
       </div>
       {/* button */}
