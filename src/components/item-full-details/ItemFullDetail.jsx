@@ -3,9 +3,11 @@ import decreseIcon from "@/assets/images/common-icons/decrease-icon.svg";
 import increaseIcon from "@/assets/images/common-icons/increas-icon.svg";
 import cartIcon from "@/assets/images/common-icons/cart-icon.svg";
 import { useState } from "react";
+import { useCartStore } from "../../store/cartStore";
 
 const ItemFullDetail = () => {
   const [itemCount, setItemCount] = useState(1);
+  const addItem = useCartStore((state) => state.addItem);
   return (
     <>
       {/* first */}
@@ -113,13 +115,13 @@ const ItemFullDetail = () => {
         </div>
       </div>
       {/* button */}
-      <a
-        href="#"
+      <button
         className="my-[30px] flex items-center gap-[10px] w-full bg-primary text-white justify-center rounded-[50px] py-[10px]"
+        onClick={() => addItem(itemCount)}
       >
         <img src={cartIcon} alt="" />
         Add to Cart
-      </a>
+      </button>
       {/* Additional Details */}
       <div className="flex flex-col gap-[15px]">
         <span>Additional Details</span>

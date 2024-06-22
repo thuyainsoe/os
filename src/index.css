@@ -7,6 +7,7 @@
 @layer components {
   .container-md {
     @apply px-[2.7778%];
+    /* 2xl:max-w-[1360px] 2xl:m-auto */
   }
 }
 

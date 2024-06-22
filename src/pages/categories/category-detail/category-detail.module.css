@@ -5,30 +5,30 @@
 
 .fiterBoxWrapper {
   @apply absolute left-[-300px] opacity-0 top-0 z-[100];
-  transition: all 0.4s ease-in-out;
+  transition: all 0.5s ease-in-out;
   &.active {
     left: 0px;
     top: 0px;
     opacity: 1;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
 }
 
 .viewSwitcherWrapper {
   @apply overflow-hidden;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.5s ease-in-out;
   &.active {
-    width: calc(100% - 260px);
+    max-width: calc(100% - 260px);
     transform: translateX(260px);
-    transition: all 0.4s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
 }
 
 .searchInput {
   @apply flex gap-[12px] items-center w-[500px] border border-lightgray h-[36px] px-[20px] rounded-[100px];
-  transition: all 0.4s ease-in-out;
+  transition: all 0.5s ease-in-out;
   &.active {
     transform: translateX(155px);
-    transition: all 0.4s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
 }
