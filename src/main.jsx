@@ -9,6 +9,7 @@ import CategoryDetail from "@/pages/categories/category-detail/CategoryDetail";
 import Shops from "@/pages/shops/Shops";
 import ShopDetail from "@/pages/shops/ShopDetail";
 import ItemDetail from "@/pages/categories/category-detail/item-detail/ItemDetail";
+import Cart from "@/pages/cart/Cart";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/categories/:category/:item",
         element: <ItemDetail />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
       {
         path: "*",

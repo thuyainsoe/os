@@ -69,3 +69,10 @@ input.review-dialog-input {
     @apply text-[#828282] text-[14px];
   }
 }
+
+textarea.custom-address-input {
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}

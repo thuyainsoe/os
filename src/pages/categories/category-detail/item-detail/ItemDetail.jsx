@@ -58,10 +58,7 @@ const ItemDetail = () => {
   };
   return (
     <>
-      <div
-        className="container-md 2xl:max-w-[1380px] 2xl:m-auto"
-        id="item-detail"
-      >
+      <div className="container-md" id="item-detail">
         {/* Breadcrumb */}
         <div className="flex items-center gap-[20px] my-[20px]">
           <Link to="/categories" className="flex items-center gap-[5px]">
@@ -81,7 +78,7 @@ const ItemDetail = () => {
         </div>
         {/* Detail Container */}
         <div className="flex justify-between">
-          <div className="w-[39.8529%]">
+          <div className="w-[39.8529%] 2xl:w-[33%]">
             <ReactImageGallery
               items={images}
               showPlayButton={false}
@@ -89,10 +86,10 @@ const ItemDetail = () => {
               autoPlay={false}
             />
           </div>
-          <div className="w-[35.8823%]">
+          <div className="w-[35.8823%] 2xl:w-[34%]">
             <ItemFullDetail />
           </div>
-          <div className="w-[18.3823%] flex flex-col gap-[40px]">
+          <div className="w-[18.3823%] 2xl:w-[25%] flex flex-col gap-[40px]">
             <div className="p-[20px] border-primary border rounded-[4px]">
               <div className="flex items-center justify-between">
                 <div className="flex flex-col gap-[10px]">
@@ -171,7 +168,7 @@ const ItemDetail = () => {
         </div>
       </div>
       {/* bottonm  */}
-      <div className="2xl:max-w-[1360px] 2xl:m-auto">
+      <div>
         <div className=" container-md flex items-center gap-[5px] w-full h-[35px my-[40px]">
           <img src={burgerLogo} alt="" />
           <span className="text-[700] text-primary">Other related items</span>
