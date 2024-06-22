@@ -4,12 +4,19 @@ import ViewSwitcher from "@/components/view-switcher/ViewSwitcher.jsx";
 import CartItemAddress from "@/components/cart-item-address/CartItemAddress";
 import OrderConfirmation from "@/components/order-confirmation/OrderConfirmation";
 import { useState } from "react";
+import OrderSuccessDialog from "@/components/order-success-dlalog/OrderSuccessDialog";
 
 const Cart = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [confirm, setIsConfirm] = useState(false);
+
+  const handleConfirm = (type) => {
+    setIsConfirm(type);
+  };
   const dialogButtonHandler = (type) => {
     setIsVisible(type);
   };
+
   return (
     <div className="my-[40px]">
       <div className="container-md flex flex-col gap-[30px]">
@@ -92,9 +99,10 @@ const Cart = () => {
               {isVisible && (
                 <OrderConfirmation
                   dialogButtonHandler={dialogButtonHandler}
-                  isVisible={isVisible}
+                  handleConfirm={handleConfirm}
                 />
               )}
+              {confirm && <OrderSuccessDialog handleConfirm={handleConfirm} />}
             </div>
           </div>
           {/* right section */}
