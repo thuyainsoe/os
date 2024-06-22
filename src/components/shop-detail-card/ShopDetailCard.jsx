@@ -1,6 +1,7 @@
 import ReactStars from "react-rating-stars-component";
 import shopLogo1 from "@/assets/images/mock-images/shop1.png";
 import priceTag from "@/assets/images/common-icons/price-tag.svg";
+import { Link } from "react-router-dom";
 const ShopDetailCard = () => {
   return (
     <div className="aspect-[440_/_385] p-[15px] border border-lightgray flex flex-col gap-[15px]">
@@ -10,9 +11,11 @@ const ShopDetailCard = () => {
           src={shopLogo1}
           alt=""
         />
-        <button className="w-[87px] h-[31px] border border-primary text-primary rounded-[4px] text-[14px]">
+        <Link 
+          to={`/shops/1`}
+          className="w-[87px] h-[31px] border border-primary text-primary rounded-[4px] text-[14px] flex items-center justify-center">
           View Shop
-        </button>
+        </Link>
       </div>
 
       <div className="p-[10px]">
