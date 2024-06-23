@@ -4,10 +4,18 @@ import fav from "@/assets/images/nav-items/fav.svg";
 import category from "@/assets/images/nav-items/category.svg";
 import cart from "@/assets/images/nav-items/cart.svg";
 import { Link, NavLink } from "react-router-dom";
-import { useCartStore } from "../../store/cartStore";
+import { useCartStore } from "@/store/cartStore";
+import { useLoginStore } from "@/store/loginStore";
+import LoginInputDialog from "@/components/login-input-dialog/LoginInputDialog";
+import userLogo from "@/assets/images/common-icons/user-logo.svg";
+import downIcon from "@/assets/images/common-icons/down-tiny-icon-white.svg";
 
 const Navbar = () => {
   const itemCount = useCartStore((state) => state.itemCount);
+  const setOpen = useLoginStore((state) => state.setOpen);
+  const isOpen = useLoginStore((state) => state.isOpen);
+  const username = useLoginStore((state) => state.username);
+  const successSignIn = useLoginStore((state) => state.successSignIn);
   return (
     <div className="bg-primary w-full sticky top-0 z-[100] h-[78px]">
       <div className=" container-md  py-[15px] text-white flex justify-between">
@@ -49,11 +57,28 @@ const Navbar = () => {
             <img src={cart} alt="cart logo" />
             Carts({itemCount})
           </NavLink>
-          <NavLink>
-            <button className="bg-white text-primary py-[10px] px-[15px] rounded-[50px]">
+
+          {successSignIn ? (
+            <button
+              className="w-fit py-[10px] px-[15px] h-[36px] border border-white rounded-[50px]
+            gap-[5px] flex items-center justify-center"
+            >
+              <img src={userLogo} alt="" />
+              <span>{username.split(" ")[0]}</span>
+              <img src={downIcon} alt="" />
+            </button>
+          ) : (
+            <button
+              className="bg-white text-primary py-[10px] px-[15px] rounded-[50px]"
+              onClick={() => {
+                setOpen();
+              }}
+            >
               Sign In
             </button>
-          </NavLink>
+          )}
+
+          {isOpen && <LoginInputDialog />}
         </ul>
       </div>
     </div>

@@ -76,3 +76,38 @@ textarea.custom-address-input {
     outline: none;
   }
 }
+
+.react-international-phone-input-container {
+  @apply flex gap-[5px] mt-[10px];
+
+  .react-international-phone-country-selector {
+    @apply w-[84px] px-[20px] flex items-center justify-center border border-[#F2F2F2] rounded-[50px];
+
+    button {
+      @apply w-full;
+      border: none;
+
+      &:hover {
+        @apply bg-transparent;
+      }
+
+      .react-international-phone-country-selector-button__button-content {
+        @apply w-full  flex justify-between;
+      }
+    }
+  }
+
+  input.react-international-phone-input {
+    @apply !rounded-[50px] !w-[355px] !pl-[20px] text-[#828282] text-[14px];
+  }
+}
+
+#signup-username {
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-input-placeholder {
+    @apply text-[#828282] text-[14px];
+  }
+}
