@@ -111,3 +111,13 @@ textarea.custom-address-input {
     @apply text-[#828282] text-[14px];
   }
 }
+
+.input-reset {
+  &:focus {
+    @apply outline-none;
+  }
+
+  &::placeholder {
+    @apply text-[14px];
+  }
+}
