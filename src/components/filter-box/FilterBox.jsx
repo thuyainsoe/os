@@ -199,7 +199,7 @@ const FilterBox = ({ setFilterClose }) => {
           {/* price start */}
           <div className="flex flex-col gap-[20px]">
             <div>
-              Price Range{" "}
+              Price Range
               <span className="text-[12px] italic text-darkgray">
                 (Enter amount only, eg. 100)
               </span>
