@@ -223,7 +223,7 @@ const FilterBox = ({ setFilterClose }) => {
               </div>
             </div>
           </div>
-          {/* price end */}
+          {/* price end h */}
         </div>
       </div>
     </>
